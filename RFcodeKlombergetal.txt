@@ -1,5 +1,5 @@
 #### RANDOMFOREST analysis for Primary and secondary pollinators for the whole mountain and per season and elevation ####
-## Trait paper Klomberg et al. Seasonal and altitudinal changes in floral trait importance in tropical pollination systems##
+## Trait paper Klomberg et al. Spatiotemporal shifts in the role of floral traits in shaping tropical plant-pollinator interactions##
 # yannickklomberg@gmail.com #
 
 ## packages to load
