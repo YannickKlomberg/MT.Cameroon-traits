@@ -32,7 +32,7 @@ PriPoll3 %<>% mutate_at(cols, funs(factor(.))) # set as factor
 PriPoll3$PriPoll <- as.factor(PriPoll3$PriPoll) # set as factor
 
 set.seed(123)
-RF.PriPoll <- randomForest(PriPoll ~.,data = PriPoll3, proximity= TRUE, importance= TRUE, nPerm=100, mtry=sqrt(10)) #running RF with 100 permutations and mtry as the square root of the number of variables#
+RF.PriPoll <- randomForest(PriPoll ~.,data = PriPoll3, proximity= TRUE, importance= TRUE, mtry=sqrt(10)) #running RF with 100 permutations and mtry as the square root of the number of variables#
 plot(RF.PriPoll) #Plot RF to see how many trees are needed to reduce variation#
 update(RF.PriPoll, ntree = 500) #updating the model with the number of trees#
 
@@ -48,7 +48,7 @@ SecPoll3$SpCode <- NULL
 SecPoll3 %<>% mutate_at(cols, funs(factor(.)))
 
 set.seed(1234)
-RF.SecPoll <- randomForest(SecPoll ~.,data = SecPoll3, proximity= TRUE, importance= TRUE, nPerm=100, mtry=sqrt(10))
+RF.SecPoll <- randomForest(SecPoll ~.,data = SecPoll3, proximity= TRUE, importance= TRUE, mtry=sqrt(10))
 plot(RF.SecPoll)
 update(RF.SecPoll, ntree = 500)
 
@@ -91,7 +91,7 @@ set.seed(221)
 MSDRY3 <- as.data.frame(MSDRY[,4:14])
 row.names(MSDRY3) <- MSDRY$SpCode
 MSDRY3 %<>% mutate_at(cols2, funs(factor(.)))
-RF.MSDRY <- randomForest(Poll ~.,data = MSDRY3, proximity= TRUE, importance= TRUE, nPerm=100, mtry=sqrt(10))
+RF.MSDRY <- randomForest(Poll ~.,data = MSDRY3, proximity= TRUE, importance= TRUE, mtry=sqrt(10))
 plot(RF.MSDRY)
 update(RF.MSDRY, ntree = 400)
 
@@ -103,7 +103,7 @@ set.seed(222)
 MSWET3 <- as.data.frame(MSWET[,4:14])
 row.names(MSWET3) <- MSWET$SpCode
 MSWET3 %<>% mutate_at(cols2, funs(factor(.)))
-RF.MSWET <- randomForest(Poll ~.,data = MSWET3, proximity= TRUE, importance= TRUE, nPerm=100, mtry=sqrt(10))
+RF.MSWET <- randomForest(Poll ~.,data = MSWET3, proximity= TRUE, importance= TRUE, mtry=sqrt(10))
 plot(RF.MSWET)
 update(RF.MSWET, ntree = 500)
 
@@ -115,7 +115,7 @@ set.seed(223)
 CLDRY3 <- as.data.frame(CLDRY[,4:14])
 row.names(CLDRY3) <- CLDRY$SpCode
 CLDRY3 %<>% mutate_at(cols2, funs(factor(.)))
-RF.CLDRY <- randomForest(Poll ~.,data = CLDRY3, proximity= TRUE, importance= TRUE, nPerm=100, mtry=sqrt(10))
+RF.CLDRY <- randomForest(Poll ~.,data = CLDRY3, proximity= TRUE, importance= TRUE, mtry=sqrt(10))
 plot(RF.CLDRY)
 update(RF.CLDRY, ntree = 500)
 
@@ -127,7 +127,7 @@ set.seed(224)
 CLWET3 <- as.data.frame(CLWET[,4:14])
 row.names(CLWET3) <- CLWET$SpCode
 CLWET3 %<>% mutate_at(cols2, funs(factor(.)))
-RF.CLWET <- randomForest(Poll ~.,data = CLWET3, proximity= TRUE, importance= TRUE, nPerm=100, mtry=sqrt(10))
+RF.CLWET <- randomForest(Poll ~.,data = CLWET3, proximity= TRUE, importance= TRUE, mtry=sqrt(10))
 plot(RF.CLWET)
 update(RF.CLWET, ntree = 400)
 
@@ -139,7 +139,7 @@ set.seed(225)
 PCDRY3 <- as.data.frame(PCDRY[,4:14])
 row.names(PCDRY3) <- PCDRY$SpCode
 PCDRY3 %<>% mutate_at(cols2, funs(factor(.)))
-RF.PCDRY <- randomForest(Poll ~.,data = PCDRY3, proximity= TRUE, importance= TRUE, nPerm=100, mtry=sqrt(10))
+RF.PCDRY <- randomForest(Poll ~.,data = PCDRY3, proximity= TRUE, importance= TRUE, mtry=sqrt(10))
 plot(RF.PCDRY)
 update(RF.PCDRY, ntree = 500)
 
@@ -151,7 +151,7 @@ set.seed(226)
 PCWET3 <- as.data.frame(PCWET[,4:14])
 row.names(PCWET3) <- PCWET$SpCode
 PCWET3 %<>% mutate_at(cols2, funs(factor(.)))
-RF.PCWET <- randomForest(Poll ~.,data = PCWET3, proximity= TRUE, importance= TRUE, nPerm=100, mtry=sqrt(10))
+RF.PCWET <- randomForest(Poll ~.,data = PCWET3, proximity= TRUE, importance= TRUE, mtry=sqrt(10))
 plot(RF.PCWET)
 update(RF.PCWET, ntree = 500)
 
@@ -163,7 +163,7 @@ set.seed(227)
 DGDRY3 <- as.data.frame(DGDRY[,4:14])
 row.names(DGDRY3) <- DGDRY$SpCode
 DGDRY3 %<>% mutate_at(cols2, funs(factor(.)))
-RF.DGDRY <- randomForest(Poll ~.,data = DGDRY3, proximity= TRUE, importance= TRUE, nPerm=100, mtry=sqrt(10))
+RF.DGDRY <- randomForest(Poll ~.,data = DGDRY3, proximity= TRUE, importance= TRUE, mtry=sqrt(10))
 plot(RF.DGDRY)
 update(RF.DGDRY, ntree = 500)
 
@@ -175,7 +175,7 @@ set.seed(228)
 DGWET3 <- as.data.frame(DGWET[,4:14])
 row.names(DGWET3) <- DGWET$SpCode
 DGWET3 %<>% mutate_at(cols2, funs(factor(.)))
-RF.DGWET <- randomForest(Poll ~.,data = DGWET3, proximity= TRUE, importance= TRUE, nPerm=100, mtry=sqrt(10))
+RF.DGWET <- randomForest(Poll ~.,data = DGWET3, proximity= TRUE, importance= TRUE, mtry=sqrt(10))
 plot(RF.DGWET)
 update(RF.DGWET, ntree = 300)
 
